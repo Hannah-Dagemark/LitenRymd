@@ -1,4 +1,5 @@
 import pygame
+import player
 
 pygame.init()
 
@@ -8,11 +9,14 @@ clock = pygame.time.Clock()
 
 running = True 
 
+player_object = player.Player()
+
 def update():
     print("Update tick")
 
 def render():
     screen.fill("cyan")
+    player_object.render(screen)
     pygame.display.flip()
     print("Graphic tick")
 
